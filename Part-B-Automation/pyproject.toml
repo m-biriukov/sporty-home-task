@@ -1,0 +1,29 @@
+[project]
+name = "part-b-automation"
+version = "0.1.0"
+description = "Example project of python automation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "allure-pytest>=2.16.2",
+    "allure-python-commons>=2.16.2",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.0",
+    "pytest>=9.1.1",
+    "requests>=2.34.2",
+    "selenium>=4.51.0",
+    "webdriver-manager>=4.1.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.1",
+]
+
+[tool.ruff]
+line-length = 80
+target-version = "py311"
+output-format = "concise"
+
+[tool.pytest.ini_options]
+addopts = "--alluredir=allure-results --clean-alluredir"
